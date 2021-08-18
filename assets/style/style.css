@@ -1,0 +1,173 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+/* VARIABLES CSS */
+:root {
+	/* COLORS */
+	--pale-blue: hsl(225, 100%, 94%);
+	--bright-blue: hsl(245, 75%, 52%);
+
+	--very-pale-blue: hsl(225, 100%, 98%);
+	--desaturared-blue: hsl(224, 23%, 55%);
+	--dark-blue: hsl(223, 47%, 23%);
+}
+
+/* BASE SETTINGS */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Red Hat Display", sans-serif;
+	font-size: 16px;
+	background-image: url(../img/pattern-background-desktop.svg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-color: var(--pale-blue);
+}
+
+/* MAIN CSS */
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    background: #fff;
+    max-width: 450px;
+    border-radius: 1.3rem;
+    
+}
+
+.description {
+    padding: 0 3.3rem 3.3rem 3.3rem;
+}
+
+.hero img {
+    border-top-left-radius: 1.3rem;
+    border-top-right-radius: 1.3rem;
+    max-width: 100%;
+}
+
+.text-content h1 {
+    color: var(--dark-blue);
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 900;
+    margin: 2.2rem 0 1rem 0;
+}
+.text-content p {
+    text-align: center;
+    line-height: 1.6rem;
+    color: var(--desaturared-blue);
+}
+
+.plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    background: var(--very-pale-blue);
+    padding: 1.5rem;
+    border-radius: 1.3rem;
+}
+
+.plan-left {
+    display: flex;
+}
+.plan-left img {
+    margin-right: 1rem;
+}
+
+.plan-left_title h3 {
+    color: var(--dark-blue);
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.plan a {
+    color: var(--bright-blue);
+    transition: 0.3s ease;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.plan a:hover {
+    text-decoration: none;
+}
+
+.btns {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#primary-btn {
+    outline: none;
+    border: none;
+    background: var(--bright-blue);
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    font-size: 1rem;
+    padding: 1rem 0;
+    border-radius: .8rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    box-shadow: 0px 4px 15px 0px rgba(56, 41, 224, 0.6);
+    transition: 0.3s ease;
+}
+#primary-btn:hover {
+    opacity: .80;
+}
+
+#secondary-btn {
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--desaturared-blue);
+    font-size: .9rem;
+    font-weight: 900;
+    transition: 0.3s ease;
+}
+#secondary-btn:hover {
+    color: #000;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 470px) {
+
+    body {
+        background-image: url(../img/pattern-background-mobile.svg);
+    }
+    #container {
+        max-width: 85%;
+    }
+    .description {
+        padding: 0 1.3rem 2.5rem 1.3rem;
+    }
+    .text-content h1 {
+        font-size: 1.4rem;
+        margin: 1.3rem 0 1rem 0;
+    }
+    .text-content p {
+        font-size: .875rem;
+    }
+    .plan {
+        padding: 1rem;
+    }
+    .plan h3 {
+        font-size: .875rem;
+    }
+    .plan-left_title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #primary-btn {
+        font-size: .875rem;
+    }
+}
